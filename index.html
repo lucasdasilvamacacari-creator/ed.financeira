@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#8a6d3b">
 <title>💸 Educação Financeira — Crédito & O Custo do Dinheiro</title>
-<script src="[cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
 tailwind.config = {
   theme: {
@@ -645,19 +645,15 @@ buildQuiz('quizB', quizB);
 function makeIconPNG(size){
   const c = document.createElement('canvas'); c.width = c.height = size;
   const ctx = c.getContext('2d');
-  // fundo bege com cantos arredondados
   const r = size * 0.22;
   ctx.fillStyle = '#f5efe2';
   ctx.beginPath(); ctx.roundRect(0,0,size,size,r); ctx.fill();
-  // círculo de contraste
   ctx.fillStyle = '#8a6d3b';
   ctx.beginPath(); ctx.arc(size/2, size/2, size*0.38, 0, Math.PI*2); ctx.fill();
-  // símbolo
   ctx.fillStyle = '#faf6ef';
   ctx.font = `bold ${size*0.42}px Arial, sans-serif`;
   ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
   ctx.fillText('R$', size/2, size/2 + size*0.02);
-  // borda
   ctx.strokeStyle = '#9a3412'; ctx.lineWidth = size*0.03;
   ctx.beginPath(); ctx.roundRect(ctx.lineWidth/2, ctx.lineWidth/2, size-ctx.lineWidth, size-ctx.lineWidth, r); ctx.stroke();
   return c.toDataURL('image/png');
@@ -667,10 +663,8 @@ function makeIconPNG(size){
   try{
     const icon192 = makeIconPNG(192);
     const icon512 = makeIconPNG(512);
-    // favicon + ícone iOS
     const fav = document.createElement('link'); fav.rel='icon'; fav.type='image/png'; fav.href=icon192; document.head.appendChild(fav);
     const apple = document.createElement('link'); apple.rel='apple-touch-icon'; apple.href=icon192; document.head.appendChild(apple);
-    // manifest para instalar como app
     const manifest = {
       name: 'Educação Financeira — Revisão de Lucas M',
       short_name: 'Ed. Financeira',
@@ -686,7 +680,7 @@ function makeIconPNG(size){
     const blob = new Blob([JSON.stringify(manifest)], {type:'application/json'});
     const link = document.createElement('link'); link.rel='manifest'; link.href=URL.createObjectURL(blob);
     document.head.appendChild(link);
-  }catch(e){ /* navegadores antigos: segue funcionando como site normal */ }
+  }catch(e){ }
 })();
 </script>
 </body>
