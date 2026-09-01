@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#8a6d3b">
+<title>💸 Educação Financeira — Crédito & O Custo do Dinheiro</title>
+<script src="[cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        bege: { 50:'#faf6ef', 100:'#f5efe2', 200:'#eadfc8', 300:'#dcc9a3', 400:'#c9ad78', 500:'#b8945a', 600:'#8a6d3b', 700:'#6e552e', 800:'#4d3b20', 900:'#332714' },
+        acento: '#9a3412'
+      },
+      fontFamily: { sans: ['Inter','system-ui','sans-serif'] }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-padding-top: 90px; }
+  .card { transition: transform .15s ease, box-shadow .15s ease; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(77,59,32,.15); }
+  .opt-btn:disabled { cursor: not-allowed; }
+</style>
+</head>
+<body class="bg-bege-100 text-bege-900 font-sans antialiased">
+
+<!-- ===================== HEADER ===================== -->
+<header class="sticky top-0 z-50 bg-bege-800/95 backdrop-blur text-bege-50 shadow-lg">
+  <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between gap-3">
+    <a href="#topo" class="flex items-center gap-2 font-bold text-lg sm:text-xl">💸 <span class="hidden sm:inline">Educação Financeira</span><span class="sm:hidden">Ed. Financeira</span></a>
+    <span class="text-xs sm:text-sm bg-bege-600 px-3 py-1.5 rounded-full font-semibold whitespace-nowrap">✏️ Revisão de Lucas M</span>
+  </div>
+</header>
+
+<main id="topo" class="max-w-5xl mx-auto px-4 pb-24">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="text-center py-10 sm:py-14">
+    <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-bege-800">💸 EDUCAÇÃO FINANCEIRA</h1>
+    <p class="text-xl sm:text-2xl mt-2 font-semibold text-acento">Crédito & O Custo do Dinheiro</p>
+    <p class="mt-4 max-w-2xl mx-auto text-bege-700">Conteúdo reorganizado em sequência, extraindo o ouro da aula, sem mudar a matéria. Escrito de forma mais fácil de entender, para aprender e não decorar.</p>
+  </section>
+
+  <!-- ===================== MENU DE BOTÕES ===================== -->
+  <nav class="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-14">
+    <a href="#s0"  class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">📌 Ideia principal</a>
+    <a href="#s1"  class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">1. A regra de ouro</a>
+    <a href="#s2"  class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">2. As 3 perguntas ⭐</a>
+    <a href="#s3"  class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">3. Cartão de crédito</a>
+    <a href="#s4"  class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">4. Rotativo do cartão</a>
+    <a href="#s5"  class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">5. Cheque especial</a>
+    <a href="#s6"  class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">6. Comparando créditos</a>
+    <a href="#s7"  class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">7. Trocar dívida cara</a>
+    <a href="#s8"  class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">8. Parcelado "sem juros"</a>
+    <a href="#s9"  class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">9. Juro escondido</a>
+    <a href="#s10" class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">10. CET</a>
+    <a href="#s11" class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">11. Financiamento</a>
+    <a href="#s12" class="card bg-bege-50 border border-bege-300 rounded-2xl p-4 font-semibold text-sm sm:text-base text-bege-800">12. Resumão</a>
+    <a href="#ouro" class="card bg-bege-600 text-bege-50 rounded-2xl p-4 font-semibold text-sm sm:text-base">🎯 Revisão de Lucas M</a>
+    <a href="#exercicios" class="card bg-bege-700 text-bege-50 rounded-2xl p-4 font-semibold text-sm sm:text-base">📝 Lista de Exercícios</a>
+    <a href="#quiz-credito" class="card bg-acento text-bege-50 rounded-2xl p-4 font-semibold text-sm sm:text-base col-span-2 sm:col-span-1">🧠 Quiz (50 perguntas)</a>
+  </nav>
+
+  <!-- ===================== IDEIA PRINCIPAL ===================== -->
+  <section id="s0" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">📌 Ideia principal da matéria</h2>
+    <p class="mb-3">Nesta matéria você aprende <strong>o outro lado dos juros</strong>.</p>
+    <p class="mb-4">Na aula passada, os juros faziam o dinheiro render. Agora, eles fazem uma dívida crescer. A fórmula é exatamente a mesma; o que muda é a taxa de juros.</p>
+    <div class="border-l-4 border-acento bg-bege-200 rounded-r-xl p-4">
+      <p class="font-semibold">A pergunta mais importante da matéria é:</p>
+      <p class="text-lg font-bold text-acento mt-1">"Quanto eu vou pagar no final?"</p>
+    </div>
+  </section>
+
+  <!-- ===================== 1 ===================== -->
+  <section id="s1" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">1. A regra de ouro: juros compostos servem para investir e para dever</h2>
+    <p class="mb-3">A mesma fórmula é usada dos dois lados:</p>
+    <p class="text-center text-2xl font-bold bg-bege-200 rounded-xl py-4 mb-5">M = C × (1 + i)ⁿ</p>
+    <div class="overflow-x-auto mb-5">
+      <table class="w-full text-left border-collapse">
+        <thead><tr class="bg-bege-700 text-bege-50"><th class="p-3 rounded-tl-xl">Símbolo</th><th class="p-3 rounded-tr-xl">Significado</th></tr></thead>
+        <tbody class="divide-y divide-bege-300">
+          <tr class="bg-bege-100"><td class="p-3 font-bold">M</td><td class="p-3">Montante (valor final).</td></tr>
+          <tr><td class="p-3 font-bold">C</td><td class="p-3">Capital (valor inicial).</td></tr>
+          <tr class="bg-bege-100"><td class="p-3 font-bold">i</td><td class="p-3">Taxa de juros.</td></tr>
+          <tr><td class="p-3 font-bold">n</td><td class="p-3">Tempo (meses ou anos).</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bg-bege-200 border border-bege-400 rounded-xl p-4 mb-4">
+      <p class="font-bold text-bege-800 mb-2">O ouro da aula ⭐</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li><strong>Investimento</strong> → juros trabalham a seu favor.</li>
+        <li><strong>Dívida</strong> → juros trabalham contra você.</li>
+        <li>O problema não é a fórmula, é o tamanho da taxa de juros.</li>
+      </ul>
+    </div>
+    <p class="font-bold mb-2">Exemplo da aula</p>
+    <ul class="list-disc pl-5 space-y-1 mb-3">
+      <li>R$ 1.000 aplicados em um CDB (14,15% ao ano) → <strong class="text-green-700">R$ 1.141,50</strong>.</li>
+      <li>R$ 1.000 no rotativo do cartão (442,4% ao ano) → <strong class="text-acento">R$ 5.424,00</strong>.</li>
+    </ul>
+    <p><strong>Conclusão:</strong> a dívida cresce muito mais rápido do que um investimento rende.</p>
+  </section>
+
+  <!-- ===================== 2 ===================== -->
+  <section id="s2" class="mb-12 bg-bege-50 border-2 border-acento rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-2">2. As 3 perguntas de qualquer crédito <span class="text-acento">(conteúdo mais importante)</span></h2>
+    <p class="mb-5">Antes de aceitar qualquer crédito, faça estas três perguntas:</p>
+    <div class="grid sm:grid-cols-3 gap-4 mb-5">
+      <div class="bg-bege-200 rounded-2xl p-5">
+        <h3 class="font-extrabold text-lg mb-2">2.1 Taxa</h3>
+        <p class="mb-2">Quanto o banco cobra de juros.</p>
+        <p class="mb-2"><strong>Pergunta:</strong> Quanto custa por mês?</p>
+        <p class="text-sm text-bege-700">Exemplo: 2,2% ao mês • 15% ao mês.</p>
+      </div>
+      <div class="bg-bege-200 rounded-2xl p-5">
+        <h3 class="font-extrabold text-lg mb-2">2.2 Prazo</h3>
+        <p class="mb-2">Por quanto tempo a dívida será paga.</p>
+        <p class="mb-2"><strong>Pergunta:</strong> Em quantas parcelas?</p>
+        <p class="text-sm text-bege-700"><strong>Importante:</strong> Quanto maior o prazo, menor costuma ser a parcela.</p>
+      </div>
+      <div class="bg-bege-700 text-bege-50 rounded-2xl p-5">
+        <h3 class="font-extrabold text-lg mb-2">2.3 Total pago ⭐</h3>
+        <p class="mb-2">É a pergunta mais importante.</p>
+        <p class="mb-2"><strong>Pergunta:</strong> Quanto vai sair do meu bolso no final?</p>
+        <p class="text-sm">Sempre some todas as parcelas e compare com o preço à vista.</p>
+      </div>
+    </div>
+    <div class="border-l-4 border-acento bg-bege-200 rounded-r-xl p-4">
+      <p class="font-bold">Ouro da aula: <span class="text-acento">Parcela pequena não significa crédito barato.</span></p>
+    </div>
+  </section>
+
+  <!-- ===================== 3 ===================== -->
+  <section id="s3" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">3. Cartão de crédito</h2>
+    <p class="mb-5">O cartão é um <strong>empréstimo de curto prazo</strong>. Enquanto a fatura é paga inteira até o vencimento, não há juros. O problema começa quando você paga apenas uma parte.</p>
+    <p class="font-bold mb-2">Como funciona</p>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-left border-collapse">
+        <thead><tr class="bg-bege-700 text-bege-50"><th class="p-3 rounded-tl-xl">Situação</th><th class="p-3 rounded-tr-xl">O que acontece</th></tr></thead>
+        <tbody class="divide-y divide-bege-300">
+          <tr class="bg-bege-100"><td class="p-3">Pagou a fatura inteira.</td><td class="p-3 text-green-700 font-semibold">Juros zero.</td></tr>
+          <tr><td class="p-3">Pagou só uma parte.</td><td class="p-3 text-acento font-semibold">O restante entra no rotativo.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="font-bold mb-2">Se não conseguir pagar tudo, existem três caminhos</p>
+    <div class="overflow-x-auto mb-5">
+      <table class="w-full text-left border-collapse">
+        <thead><tr class="bg-bege-700 text-bege-50"><th class="p-3 rounded-tl-xl">Opção</th><th class="p-3 rounded-tr-xl">Taxa aproximada</th></tr></thead>
+        <tbody class="divide-y divide-bege-300">
+          <tr class="bg-bege-100"><td class="p-3">Rotativo.</td><td class="p-3"><strong>15% ao mês</strong> (o pior).</td></tr>
+          <tr><td class="p-3">Parcelar a fatura.</td><td class="p-3">Cerca de <strong>7% ao mês</strong>.</td></tr>
+          <tr class="bg-bege-100"><td class="p-3">Empréstimo pessoal.</td><td class="p-3">Cerca de <strong>4% ao mês</strong>.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="border-l-4 border-acento bg-bege-200 rounded-r-xl p-4">
+      <p class="font-bold">Ouro da aula ⭐ — Entre essas opções, o empréstimo pessoal costuma ser menos caro do que deixar a dívida no cartão.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 4 ===================== -->
+  <section id="s4" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">4. Rotativo do cartão (o crédito mais caro)</h2>
+    <p class="mb-5">O rotativo é considerado <strong>o crédito mais caro do dia a dia</strong>. A taxa usada na aula foi aproximadamente <strong>15% ao mês (442,4% ao ano)</strong>.</p>
+    <p class="font-bold mb-2">Como a dívida cresce</p>
+    <div class="overflow-x-auto mb-5">
+      <table class="w-full text-left border-collapse">
+        <thead><tr class="bg-bege-700 text-bege-50"><th class="p-3 rounded-tl-xl">Tempo</th><th class="p-3 rounded-tr-xl">Dívida de R$ 1.000</th></tr></thead>
+        <tbody class="divide-y divide-bege-300">
+          <tr class="bg-bege-100"><td class="p-3">Hoje.</td><td class="p-3">R$ 1.000.</td></tr>
+          <tr><td class="p-3">1 mês.</td><td class="p-3">R$ 1.150.</td></tr>
+          <tr class="bg-bege-100"><td class="p-3">3 meses.</td><td class="p-3">R$ 1.520,87.</td></tr>
+          <tr><td class="p-3">12 meses.</td><td class="p-3 font-bold text-acento">R$ 5.350,25.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bg-bege-200 border border-bege-400 rounded-xl p-4">
+      <p class="font-bold mb-2">O ouro da aula</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Os juros são <strong>compostos</strong>.</li>
+        <li>Todo mês os juros são calculados sobre a dívida já aumentada.</li>
+        <li>A dívida cresce de forma acelerada.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== 5 ===================== -->
+  <section id="s5" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">5. Cheque especial</h2>
+    <p class="mb-5">O cheque especial é um <strong>limite automático da conta corrente</strong>. Quando o saldo acaba, o banco empresta dinheiro automaticamente.</p>
+    <div class="grid sm:grid-cols-2 gap-4">
+      <div class="bg-bege-200 rounded-2xl p-5">
+        <p class="font-bold mb-2">Características</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Taxa média: <strong>7,5% ao mês</strong>.</li>
+          <li>Pode chegar ao teto de <strong>8% ao mês</strong>.</li>
+          <li>O juro corre <strong>por dia de uso</strong>.</li>
+        </ul>
+      </div>
+      <div class="bg-bege-700 text-bege-50 rounded-2xl p-5">
+        <p class="font-bold mb-2">Por que ele é perigoso?</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>É invisível.</li>
+          <li>O saldo fica negativo sem perceber.</li>
+          <li>O salário cobre a dívida e ela volta.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 6 ===================== -->
+  <section id="s6" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">6. Comparando os tipos de crédito</h2>
+    <p class="mb-5">A aula compara a mesma dívida de <strong>R$ 500 por 3 meses</strong>.</p>
+    <div class="overflow-x-auto mb-5">
+      <table class="w-full text-left border-collapse">
+        <thead><tr class="bg-bege-700 text-bege-50"><th class="p-3 rounded-tl-xl">Tipo</th><th class="p-3">Taxa ao mês</th><th class="p-3 rounded-tr-xl">Valor final</th></tr></thead>
+        <tbody class="divide-y divide-bege-300">
+          <tr class="bg-bege-100"><td class="p-3">Rotativo.</td><td class="p-3">15%.</td><td class="p-3 font-bold text-acento">R$ 760,44.</td></tr>
+          <tr><td class="p-3">Cheque especial.</td><td class="p-3">7,5%.</td><td class="p-3">R$ 621,15.</td></tr>
+          <tr class="bg-bege-100"><td class="p-3">Parcelamento da fatura.</td><td class="p-3">7%.</td><td class="p-3">R$ 612,52.</td></tr>
+          <tr><td class="p-3">Empréstimo pessoal.</td><td class="p-3">4%.</td><td class="p-3 font-bold text-green-700">R$ 562,43.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="border-l-4 border-acento bg-bege-200 rounded-r-xl p-4">
+      <p class="font-bold">Ouro da aula ⭐ — A mesma dívida muda completamente dependendo da taxa de juros.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 7 ===================== -->
+  <section id="s7" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">7. Trocar uma dívida cara por uma barata</h2>
+    <p class="mb-5">A professora mostra que faz sentido trocar uma dívida mais cara por outra menos cara.</p>
+    <p class="font-bold mb-2">Exemplo da aula — Ana deve R$ 1.000 no rotativo. Comparação:</p>
+    <div class="overflow-x-auto mb-5">
+      <table class="w-full text-left border-collapse">
+        <thead><tr class="bg-bege-700 text-bege-50"><th class="p-3 rounded-tl-xl">Opção</th><th class="p-3 rounded-tr-xl">Resultado</th></tr></thead>
+        <tbody class="divide-y divide-bege-300">
+          <tr class="bg-bege-100"><td class="p-3">Permanecer no rotativo.</td><td class="p-3 text-acento font-semibold">Dívida cresce muito mais.</td></tr>
+          <tr><td class="p-3">Pegar empréstimo de 4% ao mês e quitar o cartão.</td><td class="p-3 text-green-700 font-semibold">Dívida cresce bem menos.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="border-l-4 border-acento bg-bege-200 rounded-r-xl p-4">
+      <p class="font-bold">Ouro da aula — Compare sempre os dois montantes finais antes de decidir.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 8 ===================== -->
+  <section id="s8" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">8. Parcelado "sem juros": o juro escondido</h2>
+    <p class="mb-5">Nem sempre o parcelado "sem juros" realmente não tem juros.</p>
+    <div class="grid sm:grid-cols-2 gap-4 mb-5">
+      <div class="bg-bege-200 rounded-2xl p-5">
+        <p class="font-bold mb-2">Exemplo da aula — Fone de ouvido:</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>À vista: <strong>R$ 600</strong>.</li>
+          <li>Parcelado: <strong>3 × R$ 220</strong>.</li>
+        </ul>
+      </div>
+      <div class="bg-bege-200 rounded-2xl p-5">
+        <p class="font-bold mb-2">Conta correta</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Total parcelado = R$ 660.</li>
+          <li>Diferença = R$ 60.</li>
+          <li>Juro escondido = <strong class="text-acento">10%</strong>.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-l-4 border-acento bg-bege-200 rounded-r-xl p-4">
+      <p class="font-bold">Regra prática ⭐ — Se existe desconto à vista, existe juro embutido no parcelamento.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 9 ===================== -->
+  <section id="s9" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">9. Como descobrir o juro escondido</h2>
+    <p class="mb-5">A professora ensina um passo a passo.</p>
+    <ol class="space-y-3 mb-5">
+      <li class="bg-bege-200 rounded-xl p-4"><strong>Passo 1</strong> — Some todas as parcelas. <em>(Parcela × número de parcelas.)</em></li>
+      <li class="bg-bege-200 rounded-xl p-4"><strong>Passo 2</strong> — Descubra o verdadeiro preço à vista.</li>
+      <li class="bg-bege-200 rounded-xl p-4"><strong>Passo 3</strong> — Compare:
+        <p class="text-center text-xl font-bold mt-2">Diferença ÷ Preço à vista</p>
+        <p class="text-sm text-bege-700 mt-1 text-center">Esse resultado mostra a porcentagem do juro do período.</p>
+      </li>
+    </ol>
+    <div class="border-l-4 border-acento bg-bege-200 rounded-r-xl p-4">
+      <p class="font-bold">Ouro da aula — Sempre faça essa conta quando comparar preço à vista e parcelado.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 10 ===================== -->
+  <section id="s10" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">10. CET — Custo Efetivo Total</h2>
+    <p class="mb-5">O CET é o <strong>custo completo</strong> de um empréstimo. Ele é <strong>obrigatório por lei</strong>.</p>
+    <div class="grid sm:grid-cols-2 gap-4 mb-5">
+      <div class="bg-bege-200 rounded-2xl p-5">
+        <p class="font-bold mb-2">O CET inclui</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Juros.</li><li>IOF.</li><li>Tarifas.</li><li>Seguros.</li><li>Outras cobranças.</li>
+        </ul>
+      </div>
+      <div class="bg-bege-200 rounded-2xl p-5">
+        <p class="font-bold mb-2">Exemplo da aula — Empréstimo:</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Valor: R$ 1.000.</li>
+          <li>Juros: 3%.</li>
+          <li>Tarifa + IOF: R$ 50.</li>
+        </ul>
+        <p class="font-bold mt-3 mb-1">Resultado:</p>
+        <ul class="list-disc pl-5 space-y-1">
+          <li>Valor devolvido: R$ 1.080.</li>
+          <li>Taxa anunciada: 3%.</li>
+          <li>Custo real: <strong class="text-acento">8%</strong>.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-l-4 border-acento bg-bege-200 rounded-r-xl p-4">
+      <p class="font-bold">Ouro da aula ⭐ — Nunca compare apenas a taxa de juros. Compare o CET.</p>
+    </div>
+  </section>
+
+  <!-- ===================== 11 ===================== -->
+  <section id="s11" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">11. Financiamento</h2>
+    <p class="mb-5">O financiamento engana porque a parcela parece pequena.</p>
+    <p class="font-bold mb-2">Exemplo da aula — Carro de R$ 60.000 • Entrada: R$ 12.000 • Valor financiado: R$ 48.000.</p>
+    <div class="overflow-x-auto mb-5">
+      <table class="w-full text-left border-collapse">
+        <thead><tr class="bg-bege-700 text-bege-50"><th class="p-3 rounded-tl-xl">Prazo</th><th class="p-3">Parcela</th><th class="p-3 rounded-tr-xl">Total pago</th></tr></thead>
+        <tbody class="divide-y divide-bege-300">
+          <tr class="bg-bege-100"><td class="p-3">24 meses.</td><td class="p-3">R$ 2.595.</td><td class="p-3">R$ 74.280.</td></tr>
+          <tr><td class="p-3">36 meses.</td><td class="p-3">R$ 1.944.</td><td class="p-3">R$ 81.984.</td></tr>
+          <tr class="bg-bege-100"><td class="p-3">48 meses.</td><td class="p-3">R$ 1.629.</td><td class="p-3 font-bold text-acento">R$ 90.192.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="bg-bege-200 border border-bege-400 rounded-xl p-4">
+      <p class="font-bold mb-2">O ouro da aula ⭐</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Quanto maior o prazo, menor a parcela.</li>
+        <li>Quanto maior o prazo, maior o total pago.</li>
+        <li>O vendedor mostra a parcela; você deve olhar o total.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== 12 ===================== -->
+  <section id="s12" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-4">12. Resumão da professora</h2>
+    <p class="mb-5">Quanto custa R$ 1.000 em um ano.</p>
+    <div class="overflow-x-auto mb-5">
+      <table class="w-full text-left border-collapse">
+        <thead><tr class="bg-bege-700 text-bege-50"><th class="p-3 rounded-tl-xl">Modalidade</th><th class="p-3 rounded-tr-xl">Resultado</th></tr></thead>
+        <tbody class="divide-y divide-bege-300">
+          <tr class="bg-bege-100"><td class="p-3">Rotativo do cartão.</td><td class="p-3 font-bold text-acento">Dívida de R$ 5.424.</td></tr>
+          <tr><td class="p-3">Cheque especial.</td><td class="p-3">Dívida de R$ 2.398.</td></tr>
+          <tr class="bg-bege-100"><td class="p-3">Financiamento de veículo.</td><td class="p-3">Dívida de R$ 1.294.</td></tr>
+          <tr><td class="p-3">Tesouro Selic (investimento).</td><td class="p-3 font-bold text-green-700">R$ 1.142,50.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="border-l-4 border-acento bg-bege-200 rounded-r-xl p-4">
+      <p class="font-bold">O que essa tabela quer mostrar? Uma dívida cobra muito mais juros do que um investimento seguro consegue render.</p>
+    </div>
+  </section>
+
+  <!-- ===================== REVISÃO DE LUCAS M ===================== -->
+  <section id="ouro" class="mb-12 bg-bege-800 text-bege-50 rounded-3xl p-6 sm:p-8 shadow-lg">
+    <h2 class="text-2xl font-extrabold mb-6">🎯 Ouro da matéria — Revisão de Lucas M</h2>
+    <div class="grid sm:grid-cols-2 gap-4 mb-8">
+      <div class="bg-bege-700 rounded-2xl p-4"><p class="font-bold">As 3 perguntas de qualquer crédito</p><p class="text-bege-200">Taxa • Prazo • Total pago.</p></div>
+      <div class="bg-bege-700 rounded-2xl p-4"><p class="font-bold">Usar juros compostos</p><p class="text-bege-200">M = C × (1 + i)ⁿ para calcular dívidas.</p></div>
+      <div class="bg-bege-700 rounded-2xl p-4"><p class="font-bold">Rotativo é o crédito mais caro</p><p class="text-bege-200">Cerca de 15% ao mês.</p></div>
+      <div class="bg-bege-700 rounded-2xl p-4"><p class="font-bold">Cheque especial também cobra juros altos</p><p class="text-bege-200">Cerca de 7,5% ao mês.</p></div>
+      <div class="bg-bege-700 rounded-2xl p-4"><p class="font-bold">Descobrir juro escondido</p><p class="text-bege-200">Somar parcelas e comparar com o preço à vista.</p></div>
+      <div class="bg-bege-700 rounded-2xl p-4"><p class="font-bold">Saber o que é CET</p><p class="text-bege-200">Juros + IOF + tarifas + seguros + outros custos.</p></div>
+      <div class="bg-bege-700 rounded-2xl p-4 sm:col-span-2"><p class="font-bold">Comparar financiamento pelo total pago</p><p class="text-bege-200">Nunca apenas pela parcela.</p></div>
+    </div>
+    <h3 class="text-xl font-extrabold mb-4">✅ As 3 ideias para levar para casa (igual à aula)</h3>
+    <ol class="space-y-3">
+      <li class="bg-bege-600 rounded-xl p-4"><strong>1. O juro é o mesmo dos dois lados:</strong> a mesma fórmula serve para investimento e dívida; o que muda é a taxa.</li>
+      <li class="bg-bege-600 rounded-xl p-4"><strong>2. Parcela pequena não significa crédito barato:</strong> multiplique parcela × número de parcelas e compare com o preço à vista.</li>
+      <li class="bg-bege-600 rounded-xl p-4"><strong>3. Quitar uma dívida cara é o melhor investimento:</strong> nenhuma aplicação segura rende perto do que o rotativo cobra.</li>
+    </ol>
+  </section>
+
+  <!-- ===================== LISTA DE EXERCÍCIOS ===================== -->
+  <section id="exercicios" class="mb-12 bg-bege-50 border border-bege-300 rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-1">📝 Lista de Exercícios — Retomada de Conteúdo</h2>
+    <p class="text-bege-700 mb-6">Colégio Anglo Bauru — Educação Financeira</p>
+
+    <h3 class="text-lg font-extrabold mb-3">Dados de referência (agosto/2026)</h3>
+    <div class="overflow-x-auto mb-6">
+      <table class="w-full text-left border-collapse text-sm sm:text-base">
+        <thead><tr class="bg-bege-700 text-bege-50"><th class="p-3 rounded-tl-xl">Indicador</th><th class="p-3">Valor (a.a.)</th><th class="p-3 rounded-tr-xl">Observação</th></tr></thead>
+        <tbody class="divide-y divide-bege-300">
+          <tr class="bg-bege-100"><td class="p-3">Taxa Selic (meta)</td><td class="p-3 font-bold">14,25%</td><td class="p-3">Definida pelo Copom; vigente desde 17/06/2026.</td></tr>
+          <tr><td class="p-3">CDI</td><td class="p-3 font-bold">14,15%</td><td class="p-3">Anda colado na Selic (um pouco abaixo).</td></tr>
+          <tr class="bg-bege-100"><td class="p-3">Tesouro Selic</td><td class="p-3 font-bold">≈ 14,25%</td><td class="p-3">Título público pós-fixado, segue a Selic.</td></tr>
+          <tr><td class="p-3">Poupança</td><td class="p-3 font-bold">6,17%</td><td class="p-3">Regra de Selic &gt; 8,5% a.a. (0,5% a.m. + TR).</td></tr>
+          <tr class="bg-bege-100"><td class="p-3">CDB (referência)</td><td class="p-3 font-bold">% do CDI</td><td class="p-3">Ex.: 100% do CDI = 14,15% a.a.</td></tr>
+          <tr><td class="p-3">IPCA (12 meses)</td><td class="p-3 font-bold">4,64%</td><td class="p-3">Inflação acumulada até junho/2026 — usada para o ganho real.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bg-bege-200 border border-bege-400 rounded-xl p-4 mb-6">
+      <p class="font-bold mb-2">Fórmulas úteis</p>
+      <ul class="list-disc pl-5 space-y-1 font-mono text-sm sm:text-base">
+        <li>Juros simples: J = C · i · t</li>
+        <li>Juros compostos: M = C · (1 + i)ⁿ</li>
+        <li>Aumentos sucessivos: (1 + i₁) · (1 + i₂) − 1</li>
+        <li>Ganho ou perda real: (1 + rendimento) ÷ (1 + inflação) − 1</li>
+      </ul>
+      <p class="text-xs text-bege-700 mt-2">Fontes consultadas em agosto/2026 (valores podem variar).</p>
+    </div>
+
+    <h3 class="text-lg font-extrabold mb-4">Exercícios</h3>
+    <div class="space-y-4">
+      <div class="bg-bege-100 border border-bege-300 rounded-2xl p-5"><p><strong class="text-acento">1)</strong> A poupança rende cerca de 6,17% ao ano. Quanto rende, em juros, R$ 1.500,00 deixados por 1 ano? Qual o montante final?</p></div>
+      <div class="bg-bege-100 border border-bege-300 rounded-2xl p-5"><p><strong class="text-acento">2)</strong> Um CDB paga 80% do CDI. Com o CDI a 14,15% a.a., qual é a taxa anual desse CDB? Quanto renderia R$ 5.000,00 em 1 ano?</p></div>
+      <div class="bg-bege-100 border border-bege-300 rounded-2xl p-5"><p><strong class="text-acento">3)</strong> O Tesouro Selic rende cerca de 14,25% ao ano. Para R$ 2.400,00 aplicados a juros simples, qual é o rendimento em 1 ano? E em 6 meses (aproximadamente)?</p></div>
+      <div class="bg-bege-100 border border-bege-300 rounded-2xl p-5">
+        <p class="mb-2"><strong class="text-acento">4)</strong> Para R$ 3.000,00 aplicados por 1 ano, calcule o rendimento bruto em três opções:</p>
+        <ul class="list-disc pl-8 space-y-1"><li>Poupança (6,17%).</li><li>Tesouro Selic (14,25%).</li><li>CDB de 100% do CDI (14,15%).</li></ul>
+        <p class="mt-2">Coloque em ordem do que mais rende para o que menos rende e diga qual a diferença, em reais, entre o primeiro e o último.</p>
+      </div>
+      <div class="bg-bege-100 border border-bege-300 rounded-2xl p-5">
+        <p class="mb-2"><strong class="text-acento">5)</strong> Dois irmãos aplicaram juntos em um mesmo CDB:</p>
+        <ul class="list-disc pl-8 space-y-1"><li>Um investiu R$ 1.200,00.</li><li>O outro investiu R$ 800,00.</li></ul>
+        <p class="mt-2">Ao fim de 1 ano, a aplicação rendeu R$ 260,00 de juros. Dividindo o rendimento em partes proporcionais ao que cada um investiu, quanto cabe a cada irmão?</p>
+      </div>
+      <div class="bg-bege-100 border border-bege-300 rounded-2xl p-5">
+        <p class="mb-2"><strong class="text-acento">6)</strong> Um investimento rendeu:</p>
+        <ul class="list-disc pl-8 space-y-1"><li>5% no primeiro semestre.</li><li>9% no segundo semestre.</li></ul>
+        <p class="mt-2">Qual foi a variação percentual acumulada no ano? É correto dizer que rendeu 14%?</p>
+      </div>
+      <div class="bg-bege-100 border border-bege-300 rounded-2xl p-5"><p><strong class="text-acento">7)</strong> Uma ação subiu 25% em um mês e, no mês seguinte, caiu 25%. O investidor voltou ao valor inicial? Qual foi a variação acumulada no período?</p></div>
+      <div class="bg-bege-100 border border-bege-300 rounded-2xl p-5">
+        <p class="mb-2"><strong class="text-acento">8)</strong> Sobre um ganho bruto de R$ 2.000,00 incidem, em sequência:</p>
+        <ol class="list-decimal pl-8 space-y-1"><li>Imposto de Renda de 20%.</li><li>Taxa de administração de 5% (cobrada sobre o que sobrou).</li></ol>
+        <p class="mt-2">Qual é o valor líquido final?</p>
+      </div>
+      <div class="bg-bege-100 border border-bege-300 rounded-2xl p-5">
+        <p class="mb-2"><strong class="text-acento">9)</strong> Aplicando R$ 4.000,00 em um Tesouro Selic a 14% a.a. por 2 anos, com juros compostos:</p>
+        <ul class="list-disc pl-8 space-y-1"><li>Qual será o montante?</li><li>Quanto foi de juros no período?</li></ul>
+        <p class="mt-2 font-mono text-sm">Use: 1,14² = 1,2996.</p>
+      </div>
+      <div class="bg-bege-100 border border-bege-300 rounded-2xl p-5">
+        <p class="mb-2"><strong class="text-acento">10)</strong> Compare, para R$ 5.000,00 a 12% a.a. por 3 anos, o montante a:</p>
+        <ul class="list-disc pl-8 space-y-1"><li>Juros simples.</li><li>Juros compostos.</li></ul>
+        <p class="mt-2">Qual a diferença entre eles?</p>
+        <p class="mt-2 font-mono text-sm">Use: 1,12³ = 1,404928.</p>
+      </div>
+      <div class="bg-bege-100 border border-bege-300 rounded-2xl p-5">
+        <p class="mb-2"><strong class="text-acento">11)</strong> Um CDB rendeu 14,15% no ano e o IPCA do período foi 4,64%.</p>
+        <p>a) Qual foi a taxa de ganho real dessa aplicação?</p>
+        <p>b) E quem guardou R$ 1.000,00 em casa por 1 ano (rendimento 0%): qual o poder de compra desse dinheiro no fim do ano e qual a taxa de perda real?</p>
+      </div>
+      <div class="bg-bege-800 text-bege-50 rounded-2xl p-5">
+        <p class="mb-2"><strong class="text-bege-300">12) NÍVEL HARD</strong> — R$ 8.000,00 foram aplicados em um CDB de 100% do CDI (14,15% a.a.) por 1 ano.</p>
+        <p>a) Qual o juro bruto?</p>
+        <p>b) Descontando IR de 17,5% sobre o ganho, qual o ganho líquido, em reais?</p>
+        <p>c) Qual a taxa de rendimento líquida sobre o valor aplicado?</p>
+        <p>d) Com IPCA de 4,64%, qual a taxa de ganho real líquida? O investimento protegeu o poder de compra?</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== QUIZ CRÉDITO ===================== -->
+  <section id="quiz-credito" class="mb-12 bg-bege-50 border-2 border-acento rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-1">🧠 Treino 1 — Quiz: Crédito & O Custo do Dinheiro</h2>
+    <p class="text-bege-700 mb-6">25 perguntas • 4 alternativas • 1 tentativa por pergunta.</p>
+    <div id="quizA"></div>
+  </section>
+
+  <!-- ===================== QUIZ RETOMADA ===================== -->
+  <section id="quiz-retomada" class="mb-12 bg-bege-50 border-2 border-acento rounded-3xl p-6 sm:p-8 shadow-sm">
+    <h2 class="text-2xl font-extrabold text-bege-800 mb-1">🧠 Treino 2 — Quiz: Lista de Retomada (Investimentos & Matemática Financeira)</h2>
+    <p class="text-bege-700 mb-6">25 perguntas • 4 alternativas • 1 tentativa por pergunta.</p>
+    <div id="quizB"></div>
+  </section>
+
+</main>
+
+<footer class="bg-bege-800 text-bege-200 text-center py-6 text-sm">
+  💸 Educação Financeira — Revisão de Lucas M • Colégio Anglo Bauru
+</footer>
+
+<script>
+/* ========================================================= */
+/* ======================= QUIZ DATA ======================= */
+/* ========================================================= */
+const quizA = [
+ {q:"Qual é a fórmula dos juros compostos usada na aula?",o:["M = C × (1 + i)ⁿ","J = C · i · t","M = C + i × n","M = C × i ÷ n"],a:0},
+ {q:"Qual é a pergunta mais importante da matéria?",o:["Quanto eu vou pagar no final?","Qual é o valor da parcela?","Qual banco oferece o crédito?","Qual é o prazo mais longo?"],a:0},
+ {q:"R$ 1.000 aplicados em um CDB a 14,15% ao ano viram, em 1 ano:",o:["R$ 1.141,50","R$ 1.415,00","R$ 1.014,15","R$ 1.100,00"],a:0},
+ {q:"R$ 1.000 no rotativo do cartão (442,4% ao ano) viram, em 1 ano:",o:["R$ 5.424,00","R$ 4.424,00","R$ 1.442,40","R$ 2.398,00"],a:0},
+ {q:"Quais são as 3 perguntas de qualquer crédito?",o:["Taxa, Prazo e Total pago","Banco, Cartão e Limite","Parcela, Desconto e Cashback","Juros, Multa e Anuidade"],a:0},
+ {q:"Das 3 perguntas do crédito, qual é a mais importante?",o:["Total pago","Taxa","Prazo","Nome do banco"],a:0},
+ {q:"Segundo o ouro da aula, parcela pequena significa…",o:["Não significa crédito barato","Crédito sempre barato","Que não há juros","Que o CET é baixo"],a:0},
+ {q:"Quando o cartão de crédito NÃO cobra juros?",o:["Quando a fatura é paga inteira até o vencimento","Quando se paga o valor mínimo","Quando se usa o rotativo","Quando se parcela a fatura"],a:0},
+ {q:"O que acontece quando você paga só uma parte da fatura?",o:["O restante entra no rotativo","A dívida é perdoada","O banco parcela sem juros","O limite aumenta"],a:0},
+ {q:"Qual é a taxa aproximada do rotativo usada na aula?",o:["15% ao mês","4% ao mês","7% ao mês","7,5% ao mês"],a:0},
+ {q:"Qual é a taxa aproximada do parcelamento da fatura?",o:["Cerca de 7% ao mês","Cerca de 15% ao mês","Cerca de 4% ao mês","Cerca de 8% ao mês"],a:0},
+ {q:"Qual é a taxa aproximada do empréstimo pessoal?",o:["Cerca de 4% ao mês","Cerca de 7% ao mês","Cerca de 15% ao mês","Cerca de 2,2% ao mês"],a:0},
+ {q:"Se não conseguir pagar a fatura toda, qual opção costuma ser menos cara?",o:["Empréstimo pessoal","Rotativo","Deixar a dívida no cartão","Pagar só o mínimo"],a:0},
+ {q:"15% ao mês no rotativo equivalem a aproximadamente quanto ao ano?",o:["442,4% ao ano","180% ao ano","15% ao ano","44,2% ao ano"],a:0},
+ {q:"Uma dívida de R$ 1.000 no rotativo vira quanto em 3 meses?",o:["R$ 1.520,87","R$ 1.450,00","R$ 1.150,00","R$ 1.300,00"],a:0},
+ {q:"Uma dívida de R$ 1.000 no rotativo vira quanto em 12 meses?",o:["R$ 5.350,25","R$ 2.800,00","R$ 1.800,00","R$ 12.000,00"],a:0},
+ {q:"Qual é a taxa média do cheque especial?",o:["7,5% ao mês","15% ao mês","4% ao mês","0,5% ao mês"],a:0},
+ {q:"Qual é o teto de juros do cheque especial?",o:["8% ao mês","10% ao mês","15% ao mês","7% ao mês"],a:0},
+ {q:"No cheque especial, o juro corre…",o:["Por dia de uso","Só no fim do mês","Só depois de 30 dias","Uma vez por ano"],a:0},
+ {q:"Dívida de R$ 500 por 3 meses no rotativo (15% a.m.) termina em:",o:["R$ 760,44","R$ 621,15","R$ 612,52","R$ 562,43"],a:0},
+ {q:"Dívida de R$ 500 por 3 meses no empréstimo pessoal (4% a.m.) termina em:",o:["R$ 562,43","R$ 760,44","R$ 621,15","R$ 612,52"],a:0},
+ {q:"Fone de ouvido: à vista R$ 600 ou 3 × R$ 220. Qual é o juro escondido?",o:["10%","6%","20%","Não há juros"],a:0},
+ {q:"Regra prática do parcelado 'sem juros':",o:["Se existe desconto à vista, existe juro embutido no parcelamento","Parcelado nunca tem juros","O desconto à vista é sempre ilegal","O juro só existe acima de 12 parcelas"],a:0},
+ {q:"O que o CET inclui?",o:["Juros, IOF, tarifas, seguros e outras cobranças","Apenas os juros","Apenas IOF e tarifas","Somente o valor das parcelas"],a:0},
+ {q:"No exemplo do CET: taxa anunciada 3%, mas o custo real foi de…",o:["8%","3%","5%","10%"],a:0}
+];
+
+const quizB = [
+ {q:"Qual é a Taxa Selic (meta) nos dados de referência de agosto/2026?",o:["14,25%","14,15%","6,17%","4,64%"],a:0},
+ {q:"Qual é o valor do CDI nos dados de referência?",o:["14,15%","14,25%","6,17%","8,50%"],a:0},
+ {q:"Qual é o rendimento anual da poupança nos dados de referência?",o:["6,17%","14,25%","4,64%","8,00%"],a:0},
+ {q:"Qual é o IPCA acumulado em 12 meses nos dados de referência?",o:["4,64%","6,17%","14,15%","5,50%"],a:0},
+ {q:"Qual é a fórmula dos juros simples?",o:["J = C · i · t","M = C × (1 + i)ⁿ","J = C ÷ i × t","J = C + i + t"],a:0},
+ {q:"Qual é a fórmula dos aumentos sucessivos?",o:["(1 + i₁) · (1 + i₂) − 1","i₁ + i₂","(i₁ × i₂) + 1","(1 − i₁) · (1 − i₂)"],a:0},
+ {q:"Qual é a fórmula do ganho ou perda real?",o:["(1 + rendimento) ÷ (1 + inflação) − 1","rendimento − inflação","inflação ÷ rendimento","(1 + inflação) ÷ (1 + rendimento)"],a:0},
+ {q:"Ex. 1: R$ 1.500 na poupança (6,17% a.a.) por 1 ano rendem em juros:",o:["R$ 92,55","R$ 61,70","R$ 150,00","R$ 106,17"],a:0},
+ {q:"Ex. 1: qual o montante final de R$ 1.500 após 1 ano de poupança?",o:["R$ 1.592,55","R$ 1.561,70","R$ 1.650,00","R$ 1.500,92"],a:0},
+ {q:"Ex. 2: um CDB que paga 80% do CDI (14,15% a.a.) tem taxa anual de:",o:["11,32%","14,15%","8,00%","12,50%"],a:0},
+ {q:"Ex. 2: R$ 5.000 nesse CDB de 80% do CDI rendem em 1 ano:",o:["R$ 566,00","R$ 707,50","R$ 400,00","R$ 1.132,00"],a:0},
+ {q:"Ex. 3: R$ 2.400 no Tesouro Selic (14,25% a.a., juros simples) rendem em 1 ano:",o:["R$ 342,00","R$ 171,00","R$ 240,00","R$ 425,00"],a:0},
+ {q:"Ex. 3: e em 6 meses (aproximadamente), o rendimento é:",o:["R$ 171,00","R$ 342,00","R$ 85,50","R$ 120,00"],a:0},
+ {q:"Ex. 4: para R$ 3.000 por 1 ano, a ordem do que mais rende para o que menos rende é:",o:["Tesouro Selic > CDB 100% do CDI > Poupança","Poupança > CDB > Tesouro Selic","CDB > Poupança > Tesouro Selic","Todos rendem igual"],a:0},
+ {q:"Ex. 4: qual a diferença em reais entre o primeiro (14,25%) e o último (6,17%)?",o:["R$ 242,40","R$ 185,10","R$ 427,50","R$ 300,00"],a:0},
+ {q:"Ex. 5: dividindo R$ 260 proporcionalmente a R$ 1.200 e R$ 800, cada irmão recebe:",o:["R$ 156,00 e R$ 104,00","R$ 130,00 e R$ 130,00","R$ 160,00 e R$ 100,00","R$ 180,00 e R$ 80,00"],a:0},
+ {q:"Ex. 6: rendimento de 5% e depois 9% acumula quanto no ano?",o:["14,45%","14,00%","13,55%","15,00%"],a:0},
+ {q:"Ex. 6: é correto dizer que rendeu 14%?",o:["Não, pois os aumentos são sucessivos (juro sobre juro)","Sim, basta somar as taxas","Sim, porque 5 + 9 = 14","Não, rendeu menos de 14%"],a:0},
+ {q:"Ex. 7: uma ação sobe 25% e depois cai 25%. Qual a variação acumulada?",o:["−6,25% (não volta ao valor inicial)","0% (volta ao valor inicial)","+6,25%","−25%"],a:0},
+ {q:"Ex. 8: R$ 2.000 com IR de 20% e depois taxa de 5% sobre o que sobrou. Valor líquido:",o:["R$ 1.520,00","R$ 1.500,00","R$ 1.600,00","R$ 1.400,00"],a:0},
+ {q:"Ex. 9: R$ 4.000 a 14% a.a. por 2 anos (1,14² = 1,2996). Montante e juros:",o:["R$ 5.198,40 de montante e R$ 1.198,40 de juros","R$ 5.120,00 e R$ 1.120,00","R$ 4.560,00 e R$ 560,00","R$ 5.600,00 e R$ 1.600,00"],a:0},
+ {q:"Ex. 10: R$ 5.000 a 12% a.a. por 3 anos — diferença entre compostos e simples:",o:["R$ 224,64 (R$ 7.024,64 − R$ 6.800,00)","R$ 0,00 (são iguais)","R$ 424,64","R$ 124,64"],a:0},
+ {q:"Ex. 11a: CDB rendeu 14,15% com IPCA de 4,64%. O ganho real foi de aproximadamente:",o:["9,09%","9,51%","14,15%","4,64%"],a:0},
+ {q:"Ex. 11b: quem guardou R$ 1.000 em casa (0%) com IPCA de 4,64% teve perda real de cerca de:",o:["−4,43% (poder de compra ≈ R$ 955,66)","−4,64% (poder de compra ≈ R$ 953,60)","0% (dinheiro não muda)","−10%"],a:0},
+ {q:"Ex. 12: R$ 8.000 a 14,15% a.a. → juro bruto de R$ 1.132. Com IR de 17,5%, o ganho líquido é:",o:["R$ 933,90 (≈ 11,67% líquido; ganho real ≈ 6,72% — protegeu o poder de compra)","R$ 1.132,00 (o IR não muda nada)","R$ 800,00 (≈ 10% líquido)","R$ 933,90, mas não protegeu o poder de compra"],a:0}
+];
+
+/* ========================================================= */
+/* ====================== QUIZ ENGINE ====================== */
+/* ========================================================= */
+function shuffle(arr){ const a=[...arr]; for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];} return a; }
+
+function buildQuiz(containerId, data){
+  const el = document.getElementById(containerId);
+  let idx = 0, score = 0, questions = [];
+
+  function prepare(){
+    questions = shuffle(data).map(item => {
+      const opts = item.o.map((t,i)=>({t, correct: i===item.a}));
+      return { q: item.q, opts: shuffle(opts) };
+    });
+    idx = 0; score = 0;
+  }
+
+  function render(){
+    if(idx >= questions.length){ return renderEnd(); }
+    const cur = questions[idx];
+    el.innerHTML = `
+      <div class="mb-4 flex items-center justify-between text-sm font-semibold text-bege-700">
+        <span>Pergunta ${idx+1} de ${questions.length}</span>
+        <span>Acertos: <span class="text-green-700">${score}</span></span>
+      </div>
+      <div class="w-full bg-bege-200 rounded-full h-2 mb-6">
+        <div class="bg-acento h-2 rounded-full transition-all" style="width:${(idx/questions.length)*100}%"></div>
+      </div>
+      <p class="text-lg font-bold text-bege-800 mb-5">${cur.q}</p>
+      <div class="grid gap-3">
+        ${cur.opts.map((o,i)=>`
+          <button data-i="${i}" class="opt-btn card text-left bg-bege-100 border border-bege-300 rounded-xl px-4 py-3 font-medium hover:bg-bege-200">
+            <span class="font-bold text-acento mr-2">${String.fromCharCode(65+i)})</span>${o.t}
+          </button>`).join('')}
+      </div>
+      <div id="fb-${containerId}" class="mt-4"></div>`;
+
+    el.querySelectorAll('.opt-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        const chosen = cur.opts[+btn.dataset.i];
+        el.querySelectorAll('.opt-btn').forEach(b=>{
+          b.disabled = true;
+          const o = cur.opts[+b.dataset.i];
+          if(o.correct){ b.className = 'opt-btn text-left bg-green-100 border-2 border-green-600 text-green-900 rounded-xl px-4 py-3 font-semibold'; }
+          else if(b===btn){ b.className = 'opt-btn text-left bg-red-100 border-2 border-red-600 text-red-900 rounded-xl px-4 py-3 font-semibold'; }
+          else { b.classList.add('opacity-50'); }
+        });
+        if(chosen.correct) score++;
+        const fb = document.getElementById(`fb-${containerId}`);
+        fb.innerHTML = `
+          <p class="font-bold ${chosen.correct?'text-green-700':'text-red-700'} mb-3">${chosen.correct?'✅ Correto! Boa, continue assim.':'❌ Errou. A resposta certa está marcada em verde.'}</p>
+          <button class="bg-bege-700 hover:bg-bege-800 text-bege-50 font-bold px-6 py-3 rounded-xl w-full sm:w-auto">
+            ${idx+1 < questions.length ? 'Próxima pergunta →' : 'Ver resultado 🏁'}
+          </button>`;
+        fb.querySelector('button').addEventListener('click', ()=>{ idx++; render(); window.scrollTo({top: el.closest('section').offsetTop - 80, behavior:'smooth'}); });
+      });
+    });
+  }
+
+  function renderEnd(){
+    const pct = Math.round((score/questions.length)*100);
+    const msg = pct >= 80 ? '🏆 Excelente! Você dominou o ouro da matéria!'
+              : pct >= 60 ? '👍 Bom trabalho! Revise os pontos que errou.'
+              : '📖 Continue estudando — releia as seções acima e tente de novo.';
+    el.innerHTML = `
+      <div class="text-center py-8">
+        <p class="text-5xl mb-4">${pct>=80?'🏆':pct>=60?'👍':'📖'}</p>
+        <p class="text-3xl font-extrabold text-bege-800 mb-2">${score} / ${questions.length}</p>
+        <p class="text-xl font-bold text-acento mb-2">${pct}% de acertos</p>
+        <p class="text-bege-700 mb-6">${msg}</p>
+        <button class="bg-acento hover:bg-bege-800 text-bege-50 font-bold px-8 py-3 rounded-xl">🔄 Refazer o quiz</button>
+      </div>`;
+    el.querySelector('button').addEventListener('click', ()=>{ prepare(); render(); });
+  }
+
+  prepare(); render();
+}
+
+buildQuiz('quizA', quizA);
+buildQuiz('quizB', quizB);
+
+/* ========================================================= */
+/* ============ PWA: ÍCONES PNG + MANIFEST (APP) =========== */
+/* ========================================================= */
+function makeIconPNG(size){
+  const c = document.createElement('canvas'); c.width = c.height = size;
+  const ctx = c.getContext('2d');
+  // fundo bege com cantos arredondados
+  const r = size * 0.22;
+  ctx.fillStyle = '#f5efe2';
+  ctx.beginPath(); ctx.roundRect(0,0,size,size,r); ctx.fill();
+  // círculo de contraste
+  ctx.fillStyle = '#8a6d3b';
+  ctx.beginPath(); ctx.arc(size/2, size/2, size*0.38, 0, Math.PI*2); ctx.fill();
+  // símbolo
+  ctx.fillStyle = '#faf6ef';
+  ctx.font = `bold ${size*0.42}px Arial, sans-serif`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  ctx.fillText('R$', size/2, size/2 + size*0.02);
+  // borda
+  ctx.strokeStyle = '#9a3412'; ctx.lineWidth = size*0.03;
+  ctx.beginPath(); ctx.roundRect(ctx.lineWidth/2, ctx.lineWidth/2, size-ctx.lineWidth, size-ctx.lineWidth, r); ctx.stroke();
+  return c.toDataURL('image/png');
+}
+
+(function setupPWA(){
+  try{
+    const icon192 = makeIconPNG(192);
+    const icon512 = makeIconPNG(512);
+    // favicon + ícone iOS
+    const fav = document.createElement('link'); fav.rel='icon'; fav.type='image/png'; fav.href=icon192; document.head.appendChild(fav);
+    const apple = document.createElement('link'); apple.rel='apple-touch-icon'; apple.href=icon192; document.head.appendChild(apple);
+    // manifest para instalar como app
+    const manifest = {
+      name: 'Educação Financeira — Revisão de Lucas M',
+      short_name: 'Ed. Financeira',
+      start_url: '.',
+      display: 'standalone',
+      background_color: '#f5efe2',
+      theme_color: '#8a6d3b',
+      icons: [
+        { src: icon192, sizes: '192x192', type: 'image/png', purpose: 'any maskable' },
+        { src: icon512, sizes: '512x512', type: 'image/png', purpose: 'any maskable' }
+      ]
+    };
+    const blob = new Blob([JSON.stringify(manifest)], {type:'application/json'});
+    const link = document.createElement('link'); link.rel='manifest'; link.href=URL.createObjectURL(blob);
+    document.head.appendChild(link);
+  }catch(e){ /* navegadores antigos: segue funcionando como site normal */ }
+})();
+</script>
+</body>
+</html>
